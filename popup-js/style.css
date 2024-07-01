@@ -6,13 +6,16 @@
 
 body {
     background: #1d5a7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pop-up {
-    display: flex;
+    display: none;
+    top: 50%;
     flex-direction: column;
     position: absolute;
-    top: 50%;
     background: #fff;
     padding: 20px 30px;
     height: auto;
@@ -23,7 +26,8 @@ body {
 
 .pop-up img {
     position: absolute;
-    top: -10%;
+    top: -20%;
+    height: 80px;
 }
 
 .pop-up h1 {
@@ -43,4 +47,15 @@ body {
     border: none;
     padding: 8px 20px;
     width: 100%;
+}
+
+.submit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 0 20%;
+    cursor: pointer;
+    font-size: 16px;
 }
