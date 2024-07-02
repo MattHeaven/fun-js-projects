@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    transition-duration: 0.5s;
 }
 
 :root {
@@ -9,32 +10,44 @@
     --secondary-color: #fff;
 }
 
+.dark-mode {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+body {
+    background: var(--secondary-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 nav {
     display: flex;
-    align-items: center;
-    margin: 30px 20px 0 20px;
-    
+    height: 60px;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
 }
 
 nav div {
     display: flex;
-    flex-grow: 1;
     align-items: center;
-    
+    margin-left: 20px;
 }
 
-nav div svg {
-    margin-right: 20%;
+nav div i {
     cursor: pointer;
     color: var(--primary-color);
-    height: 36px;
 }
 
 nav ul {
+    max-width: fit-content;
     display: flex;
+    flex-grow: 1;
     list-style-type: none;
-    max-width: 450px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 nav ul li {
@@ -50,7 +63,6 @@ nav ul li a {
 .main {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 40px;
     max-width: 800px;
 }
@@ -59,6 +71,7 @@ nav ul li a {
     flex-grow: 1;
     margin-right: 20px;
     flex-direction: column;
+    text-align: left;
 }
 
 .main div h1 {
