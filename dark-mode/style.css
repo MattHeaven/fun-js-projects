@@ -29,6 +29,7 @@ nav {
     align-items: end;
     justify-content: space-between;
     width: 100%;
+    max-width: 800px;
 }
 
 nav div {
