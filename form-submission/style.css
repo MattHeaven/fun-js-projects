@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
 }
 
-.container {
+.container form{
     background: #fff;
     min-width: fit-content;
     padding: 0 20px 20px 20px;
@@ -24,33 +24,33 @@ body {
 
 }
 
-.container div {
+.container form div {
     display: flex;
     justify-content: flex-end;
     gap: 16px;
     min-width: 332px;
 }
 
-.container div p {
+.container form div p {
     font-size: 16px;
     text-align: left;
     flex-grow: 1;
     
 }
 
-.container div input, textarea {
+.container form div input, textarea {
     width: 200px;
     border: 0;
     border-bottom: 1px solid #050a53;
 }
 
-.container div textarea {
+.container form div textarea {
     min-height: 100px;
     max-width: 200px;
     min-width: 200px;
 }
 
-.container div#exclude{
+.container form div#exclude{
     background: #fff;
     min-width: 40px;
     width: 40px;
