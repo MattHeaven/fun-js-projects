@@ -20,25 +20,39 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+
 }
 
 .container div {
     display: flex;
     justify-content: flex-end;
+    gap: 16px;
+    min-width: 332px;
 }
 
 .container div p {
     font-size: 16px;
     text-align: left;
+    flex-grow: 1;
+    
 }
 
-.container div input {
-    flex-grow: 1;
+.container div input, textarea {
+    width: 200px;
+    border: 0;
+    border-bottom: 1px solid #050a53;
+}
+
+.container div textarea {
+    min-height: 100px;
+    max-width: 200px;
     min-width: 200px;
 }
 
-.icon {
+.container div#exclude{
     background: #fff;
+    min-width: 40px;
     width: 40px;
     height: 40px;
     position: relative;
@@ -53,4 +67,14 @@ body {
 .icon svg {
     width: 20px;
     height: 20px;
+}
+
+#Submit {
+    border: 0;
+    width: fit-content;
+    padding: 8px 32px;
+    color: #fff;
+    background: #050a53;
+    border-radius: 20px;
+    cursor: pointer;
 }
