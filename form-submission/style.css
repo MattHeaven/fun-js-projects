@@ -24,27 +24,28 @@ body {
 
 }
 
-.container form div {
+.container form div div{
     display: flex;
     justify-content: flex-end;
     gap: 16px;
     min-width: 332px;
 }
 
-.container form div p {
+.container form div div p {
     font-size: 16px;
     text-align: left;
     flex-grow: 1;
     
 }
 
-.container form div input, textarea {
+.container form div div input, textarea {
     width: 200px;
     border: 0;
     border-bottom: 1px solid #050a53;
+    line-height: 18px;
 }
 
-.container form div textarea {
+.container form div div textarea {
     min-height: 100px;
     max-width: 200px;
     min-width: 200px;
@@ -69,6 +70,12 @@ body {
     height: 20px;
 }
 
+#submit-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #Submit {
     border: 0;
     width: fit-content;
@@ -77,4 +84,18 @@ body {
     background: #050a53;
     border-radius: 20px;
     cursor: pointer;
+}
+
+span {
+    display: block;
+    color: #ff0000;
+    width: 100%;
+    text-align: right;
+    flex-wrap: wrap;
+}
+
+i {
+    position: absolute;
+    color: #00d32e;
+    background: #fff;
 }
