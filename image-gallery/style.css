@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    transition-duration: 0.4s;
 }
 
 body {
@@ -13,7 +14,9 @@ body {
     overflow-x: scroll;
 }
 
-
+.gallery::-webkit-scrollbar {
+    display: none;
+}
 
 .gallery div {
     width: 100%;
@@ -26,4 +29,23 @@ body {
 
 .gallery div img {
     width: 100%;
+    filter: grayscale(100);
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+#backBtn, #nextBtn {
+    cursor: pointer;
+    margin: 40px;
 }
