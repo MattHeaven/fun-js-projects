@@ -68,6 +68,8 @@ body {
 .icon svg {
     width: 20px;
     height: 20px;
+    fill: #050a53;
+    display: block;
 }
 
 #submit-panel{
@@ -87,15 +89,18 @@ body {
 }
 
 span {
-    display: block;
+    display: none;
     color: #ff0000;
     width: 100%;
     text-align: right;
     flex-wrap: wrap;
+    font-size: 14px;
 }
 
-i {
+svg {
     position: absolute;
-    color: #00d32e;
+    fill: #00d32e;
     background: #fff;
+    height: 16px;
+    display: none;
 }
