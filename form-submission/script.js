@@ -91,16 +91,17 @@ function validateMessage(inputElement) {
 
 submitButton.addEventListener('click', function() {
     
+    
     var errorMessage = document.getElementById('submit-error');
-
+    
     
     if(nameOk && phoneOk && emailOk && messageOk) {
         console.log("We're good");
         errorMessage.style.display = 'none';
-        
+        myForm.submit();
         
     } else {
         errorMessage.style.display = 'block';
         console.log('Error somewhere');
-    }
-})
+        
+    }})
