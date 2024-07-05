@@ -2,15 +2,18 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
 }
 
 body {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: left;
-    background: #000;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(files/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -24,14 +27,20 @@ body {
 .container h2 {
     font-weight: 400;
     font-size: 36px;
+    color: #fff;
 }
 
 .container h1 {
     font-size: 48px;
     max-width: 550px;
+    color: #fff;
 }
 
-.container div {
+.container p {
+    color: #fff;
+}
+
+.container form {
     display: flex;
     align-items: center;
     height: 50px;
@@ -54,8 +63,11 @@ body {
     justify-content: center;
     background: #30850e;
     border-radius: 0 12px 12px 0;
+    cursor: pointer;
 }
 
-.container button img {
-
+.container span {
+    display: none;
+    color: #61b752;
+    font-size: 12px;
 }
