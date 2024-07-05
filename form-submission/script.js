@@ -1,23 +1,26 @@
-let nameError = document.getElementById('name-error');
-let phoneError = document.getElementById('phone-error');
-let emailError = document.getElementById('email-error');
-let messageError = document.getElementById('message-error');
-let submitError = document.getElementById('submit-error');
+let nameOk, phoneOk, emailOk, messageOk;
 
+let myForm = document.getElementById('my-form');
+myForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+
+let submitButton = document.getElementById('Submit');
 
 function validateName(inputElement) {
     var name = inputElement.value;
     var checkIcon = document.getElementById('name-check');
     var errorMessage = document.getElementById('name-error');
 
+    
     if (name.trim().length > 0){
         checkIcon.style.display = 'inline-block';
         errorMessage.style.display = 'none';
-        return true
+        nameOk = true;
     } else {
         checkIcon.style.display = 'none';
         errorMessage.style.display = 'block';
-        return false
+        nameOk = false;
     }
 }
 
@@ -29,11 +32,11 @@ function validatePhone(inputElement) {
     if (phone.trim().length > 9){
         checkIcon.style.display = 'inline-block';
         errorMessage.style.display = 'none';
-        return true
+        phoneOk = true;
     } else {
         checkIcon.style.display = 'none';
         errorMessage.style.display = 'block';
-        return false
+        phoneOk = false;
     }
 }
 
@@ -61,11 +64,11 @@ In summary, this regex pattern checks for a string that starts with one or more 
     if (emailPattern.test(email.trim())){
         checkIcon.style.display = 'inline-block';
         errorMessage.style.display = 'none';
-        return true
+        emailOk = true;
     } else {
         checkIcon.style.display = 'none';
         errorMessage.style.display = 'block';
-    return false
+        emailOk = false;
     }
 }
 
@@ -77,24 +80,27 @@ function validateMessage(inputElement) {
     if(message.trim().length > 0) {
         checkIcon.style.display = 'inline-block';
         errorMessage.style.display = 'none';
-        return true
+        messageOk = true;
     } else {
         checkIcon.style.display = 'none';
         errorMessage.style.display = 'inline-block';
-        return false
+        messageOk = false;
     }
 }
 
-function validateForm(inputElement) {
-    var errorMessage = document.getElementById('submit-error')
 
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-    })
+submitButton.addEventListener('click', function() {
+    
+    var errorMessage = document.getElementById('submit-error');
 
-    if(validateName && validateEmail && validatePhone && validateMessage) {
-        document.getElementById('contact-form').submit();
+    
+    if(nameOk && phoneOk && emailOk && messageOk) {
+        console.log("We're good");
+        errorMessage.style.display = 'none';
+        
+        
     } else {
         errorMessage.style.display = 'block';
+        console.log('Error somewhere');
     }
-}
+})
