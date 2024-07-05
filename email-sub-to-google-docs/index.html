@@ -23,18 +23,13 @@
     <script>
         const msg = document.getElementById('msg');
         const inputBox = document.getElementById('input');
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby0r-P5AP398qGGODz9iqiwmYhTUGAvojz8Ch6vX9xM9t2I0olv4qUyOsqIRarkpruh9Q/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzPu_s9BFhPgg4KZdWMEblt6H7FLCAslEbvf0TXUYTsZrReaJWmFEVvCrkjEk9cLS-E3Q/exec'
         const form = document.forms['submit-to-google-sheet']
       
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response), msg.style.display = 'block',
-            setTimeout(function(){
-                msg.style.display = 'none'
-            }, 5000),
-            form.reset()
-        )
+            .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         })
       </script>
