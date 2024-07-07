@@ -38,8 +38,12 @@
             }
             else if(pass.value.length < 8) {
                 str.innerHTML = 'medium';
+                pass.style.borderColor = 'yellow';
+                msg.style.color = 'yellow';
             } else if(pass.value.length > 8) {
                 str.innerHTML = 'strong';
+                pass.style.borderColor = '#26d730';
+                msg.style.color = '#26d730';
             }
         })
     </script>
