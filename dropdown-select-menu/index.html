@@ -14,7 +14,7 @@
                 <img src="img/arrow.png" alt="" id="arrow">
             </div>
 
-            <ul id="list">
+            <ul id="list" class="show">
                 <li class="listItem">
                     <img src="img/facebook.png" alt="">
                     <p>Facebook</p>
@@ -48,17 +48,20 @@
     var selectField = document.getElementById('selectField');
     var selectText = document.getElementById('selectText');
     var arrow = document.getElementById('arrow');
+    var list = document.getElementById('list');
     var listItems = document.getElementsByClassName('listItem');
 
     for(item of listItems) {
-        listItems.onclick = function() {
+        item.onclick = function() {
             selectText.innerHTML = this.textContent;
+            list.classList.toggle('show');
         }
     }
 
-    selectField.addEventListener("click", function() {
+    selectField.onclick = function() {
         arrow.classList.toggle('rotate');
-    })
+        list.classList.toggle('show')
+    }
 
     </script>
 </body>
