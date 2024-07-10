@@ -9,12 +9,12 @@
 <body>
     <div class="container">
         <div class="left">
-            <h1 id="date">10</h1>
-            <p id="day">Wednesday</p>
+            <h1 id="date">1</h1>
+            <p id="day">Monday</p>
         </div>
         <div class="right">
-            <p id="month">July</p>
-            <p id="year">2024</p>
+            <p id="month">January</p>
+            <p id="year">1999</p>
         </div>
     </div>
 
@@ -27,6 +27,14 @@
 
         var today = new Date();
         console.log(today);
+
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        date.innerHTML = today.getDate();
+        day.innerHTML = days[today.getDay()];
+        month.innerHTML = months[today.getMonth()];
+        year.innerHTML = today.getFullYear();
 
     </script>
 </body>
