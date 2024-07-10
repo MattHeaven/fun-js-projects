@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini calendar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="left">
+            <h1 id="date">10</h1>
+            <p id="day">Wednesday</p>
+        </div>
+        <div class="right">
+            <p id="month">July</p>
+            <p id="year">2024</p>
+        </div>
+    </div>
+
+    <script>
+        
+        var date = document.getElementById('date');
+        var day = document.getElementById('day');
+        var month = document.getElementById('month');
+        var year = document.getElementById('year');
+
+        var today = new Date();
+        console.log(today);
+
+    </script>
 </body>
 </html>
