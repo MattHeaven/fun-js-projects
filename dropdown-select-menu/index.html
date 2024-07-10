@@ -7,6 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectField">
+                <p id="selectText">Select Social Media</p>
+                <img src="img/arrow.png" alt="" id="arrow">
+            </div>
+
+            <ul id="list">
+                <li class="listItem">
+                    <img src="img/facebook.png" alt="">
+                    <p>Facebook</p>
+                </li>
+                <li class="listItem">
+                    <img src="img/instagram.png" alt="">
+                    <p>Instagram</p>
+                </li>
+                <li class="listItem">
+                    <img src="img/pinterest.png" alt="">
+                    <p>Pinterest</p>
+                </li>
+                <li class="listItem">
+                    <img src="img/twitter.png" alt="">
+                    <p>Twitter</p>
+                </li>
+                <li class="listItem">
+                    <img src="img/whatsapp.png" alt="">
+                    <p>WhatsApp</p>
+                </li>
+                <li class="listItem">
+                    <img src="img/youtube.png" alt="">
+                    <p>YouTube</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
     
+    var selectField = document.getElementById('selectField');
+    var selectText = document.getElementById('selectText');
+    var arrow = document.getElementById('arrow');
+    var listItems = document.getElementsByClassName('listItem');
+
+    for(item of listItems) {
+        listItems.onclick = function() {
+            selectText.innerHTML = this.textContent;
+        }
+    }
+
+    selectField.addEventListener("click", function() {
+        arrow.classList.toggle('rotate');
+    })
+
+    </script>
 </body>
 </html>
