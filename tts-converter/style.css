@@ -82,4 +82,7 @@ select {
     border-radius: 35px;
     appearance: none;
     background-image: url(img/dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 20px);
 }
