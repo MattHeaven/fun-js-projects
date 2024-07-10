@@ -27,4 +27,24 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    width: 20px;
 }
+
+span {
+    width: 1px;
+    height: 100%;
+    cursor: ew-resize;
+    background: #fff;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+.arrow {
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
