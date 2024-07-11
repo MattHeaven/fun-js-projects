@@ -4,3 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #26deff;
+}
