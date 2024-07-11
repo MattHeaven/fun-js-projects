@@ -11,3 +11,116 @@ body {
     background: #94efff;
 }
 
+.card {
+    background: #fff;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image {
+    height: 400px;
+    background: #000;
+}
+
+.image img {
+    height: 100%;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    gap: 16px;
+    justify-content: center;
+}
+
+.details h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.details p {
+    font-size: 14px;
+    margin: 0;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.pricing h3 {
+    margin: 0;
+}
+
+.pricing p {
+    margin: 0;
+    color: #07911e;
+}
+
+.size {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.size span{
+    font-size: 18px;
+    padding:  4px 16px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.color {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.color p, .size p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.color div {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.quantity button {
+    font-size: 16px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background: rgba(145, 142, 104, 0.151);
+    color: #000;
+}
+
+button {
+    font-size: 16px;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 32px;
+    background: #07911e;
+    color: #fff;
+}
+
